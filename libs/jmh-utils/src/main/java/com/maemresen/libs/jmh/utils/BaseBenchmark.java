@@ -25,15 +25,25 @@ public abstract class BaseBenchmark {
   protected abstract Class<?> getSpringApplicationClass();
 
   @Setup(Level.Trial)
-  public void setUp() {
+  public final void setUp() {
     System.setProperty("spring.datasource.url", postgreSQLContainer.getJdbcUrl());
     System.setProperty("spring.datasource.username", postgreSQLContainer.getUsername());
     System.setProperty("spring.datasource.password", postgreSQLContainer.getPassword());
     context = SpringApplication.run(getSpringApplicationClass());
+    postSetup();
   }
 
   @TearDown(Level.Trial)
-  public void tearDown() {
+  public final void tearDown() {
     context.close();
+    postTearDown();
+  }
+
+  protected void postSetup() {
+    // default
+  }
+
+  protected void postTearDown() {
+    // default
   }
 }

@@ -10,9 +10,9 @@
 rootProject.name = "java-persistence-workshop"
 
 include(
-    ":apps:java-jdbc",
-    ":apps:java-spring-data",
-    ":apps:java-query-dsl",
-    ":apps:java-jooq",
+    ":apps:java-persistence-jdbc",
+    ":apps:java-persistence-spring-data",
+    ":apps:java-persistence-querydsl",
+    ":apps:java-persistence-jooq",
     ":libs:jmh-utils"
 )
