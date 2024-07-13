@@ -13,5 +13,6 @@ include(
     ":apps:java-jdbc",
     ":apps:java-spring-data",
     ":apps:java-query-dsl",
-    ":apps:java-jooq"
+    ":apps:java-jooq",
+    ":libs:jmh-utils"
 )
