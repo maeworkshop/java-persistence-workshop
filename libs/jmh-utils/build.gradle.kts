@@ -1,6 +1,6 @@
 plugins {
     `java-library`
-    id("org.springframework.boot") version "3.3.1"
+    id("org.springframework.boot") version "3.3.1" apply false
     id("io.spring.dependency-management") version "1.1.5"
     id("me.champeau.jmh") version "0.6.8"
 }
@@ -16,6 +16,12 @@ java {
 
 repositories {
     mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+    }
 }
 
 dependencies {
