@@ -24,7 +24,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.postgresql:postgresql")
     implementation("org.projectlombok:lombok")
-    implementation("org.liquibase:liquibase-core")
     implementation("org.springframework.boot:spring-boot-testcontainers")
     implementation(platform("org.testcontainers:testcontainers-bom:$testContainers"))
     implementation("org.testcontainers:junit-jupiter")
@@ -32,7 +31,6 @@ dependencies {
 
     jmh(project(":libs:jmh-utils"))
 
-    compileOnly("org.flywaydb:flyway-database-postgresql")
     annotationProcessor("org.projectlombok:lombok")
     testAnnotationProcessor("org.projectlombok:lombok")
 }
