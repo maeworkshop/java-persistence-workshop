@@ -9,4 +9,6 @@
 
 rootProject.name = "java-persistence-workshop"
 
-include()
+include(
+    "workshop:querydsl:query-factory"
+)
